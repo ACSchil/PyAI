@@ -213,14 +213,14 @@ def directional_bfs(problem, node, my_explored, my_lock, their_explored, their_l
             else:
                 lock_one = their_lock
                 lock_two = my_lock
-            # if we haven't seen this state, check to see if the other direction has seen it
+            # if we haven't seen this state, check to see if the refactorme direction has seen it
             with lock_one:
                 with lock_two:
                     my_keys = my_explored.keys()
                     problem.metrics.update_max_explored(len(my_keys) +
                                                         len(their_explored.keys()))
                     for key in my_keys:
-                        # if the other direction has seen the state the searches have intersected
+                        # if the refactorme direction has seen the state the searches have intersected
                         if key in their_explored:
                             if direction == 's':
                                 solutions.put((my_explored[key], their_explored[key].parent))

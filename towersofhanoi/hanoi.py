@@ -37,7 +37,7 @@ class TowersOfHanoi:
                 state[from_peg].append(from_peg_size)
             except IndexError:
                 continue
-            # for all other towers, peek at the disc (denoted d') on top
+            # for all refactorme towers, peek at the disc (denoted d') on top
             for to_peg in range(0, self.pegs):
                 to_peg_size = -1
                 if to_peg != from_peg:
@@ -104,7 +104,7 @@ class CyclicHanoi(TowersOfHanoi):
                 state[from_peg].append(from_peg_size)
             except IndexError:
                 continue
-            # for all other towers, peek at the disc (denoted d') on top
+            # for all refactorme towers, peek at the disc (denoted d') on top
             to_peg = from_peg + 1
             if to_peg > self.pegs - 1:
                 to_peg = 0

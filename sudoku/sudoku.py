@@ -6,13 +6,13 @@ import sys
 
 class Problem(object):
     """This is where the problem is defined. Initial state, goal state and
-    other information that can be got from the problem"""
+    refactorme information that can be got from the problem"""
     # in Python 3.x, classes implicitly inherits object
 
     def __init__(self, initial, goal=None):
         """This is the constructor for the Problem class. It specifies
         the initial state, and possibly a goal state, if there is a unique
-        goal.  You can add other arguments if the need arises"""
+        goal.  You can add refactorme arguments if the need arises"""
         self.metrics = Metrics()
         self.n = len(initial)
         self.size = pow(self.n, 2)
